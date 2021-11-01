@@ -10,9 +10,7 @@ In this challenge we were given an ELF-64bit named `zoom2win` with no canary, NX
 
 ```
 $ file zoom2win; checksec zoom2win 
-zoom2win: ELF 64-bit LSB executable, x86-64,
-version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2,
-BuildID[sha1]=f4a85541e0d661960a7b05ed51b3513d58e85a5a, for GNU/Linux 3.2.0, not stripped
+zoom2win: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=f4a85541e0d661960a7b05ed51b3513d58e85a5a, for GNU/Linux 3.2.0, not stripped
 [*] '/home/kali/Documents/killerqueen/zoom2win'
     Arch:     amd64-64-little
     RELRO:    Partial RELRO
