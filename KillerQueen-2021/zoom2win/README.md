@@ -159,9 +159,10 @@ s.close()
 ```
 
 Now all we need to do is just run the program!
+
 ![](zoom2win-serverTry.png)
 
-But sadly we didn't get the flag :(
+Wait what? Sadly we didn't get the flag :(
 
 After some research, it seems the problem is stack alignment (Reference: [Buffer overflow stack alignment](https://youtu.be/vqNQe9xjz2Q)). From the youtube video, all that we need is just the address of return in main function and add it before add the address of flag into the payload.
 
