@@ -4,7 +4,7 @@ by ZeroDayTea
 
 You're a magic man aren't you? Well can you show me? nc 143.198.184.186 5000
 
-## Installation
+## Challenge
 
 In this challenge we were given an ELF-64bit named `akindofmagic` with no canary, NX enabled, and PIE is also enabled.
 
