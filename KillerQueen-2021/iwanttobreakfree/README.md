@@ -4,7 +4,7 @@ by HexPhoenix
 
 I want to break free... from this Python jail. nc 143.198.184.186 45457
 
-## Challenge
+## Analysis
 
 In this challenge we were given a zip file named `jailpublic.zip`. It contains 2 files, `blacklist.txt` and `jail.py`.
 
