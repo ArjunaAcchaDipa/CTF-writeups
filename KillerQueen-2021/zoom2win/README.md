@@ -4,7 +4,7 @@ by ZeroDayTea
 
 what would CTFs be without our favorite ret2win (nc 143.198.184.186 5003)
 
-## Challenge
+## Analysis
 
 In this challenge we were given an ELF-64bit named `zoom2win` with no canary, NX enabled, and no PIE.
 
@@ -109,6 +109,8 @@ Non-debugging symbols:
 0x00000000004012c0  __libc_csu_fini
 0x00000000004012c8  _fini
 ```
+
+## Exploit
 
 Let's make a solver using python
 ```python
