@@ -4,13 +4,15 @@ by ZeroDayTea
 
 You're a magic man aren't you? Well can you show me? nc 143.198.184.186 5000
 
-## Challenge
+## Analysis
 
 In this challenge we were given an ELF-64bit named `akindofmagic` with no canary, NX enabled, and PIE is also enabled.
 
 ```
 $ file akindofmagic; checksec akindofmagic 
-akindofmagic: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=c2529d1bf8b4d4717af0728e24730b6a407050d9, for GNU/Linux 3.2.0, not stripped
+akindofmagic: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked,
+interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=c2529d1bf8b4d4717af0728e24730b6a407050d9,
+for GNU/Linux 3.2.0, not stripped
 [*] '/home/kali/Documents/killerqueen/akindofmagic'
     Arch:     amd64-64-little
     RELRO:    Full RELRO
@@ -99,6 +101,8 @@ gdb-peda$ pattern offset 1094796865
 ```
 
 Nice, we got the offset/padding. Now we need to make the `v8` variable turns into 1337 in integer or 0x539 in hexadecimal.
+
+## Exploit
 ```python
 from pwn import *
 
