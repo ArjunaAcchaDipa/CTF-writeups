@@ -45,7 +45,7 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 }
 ```
 
-From the source code, there is another function that caught my eyes. It's `flag` function. Let's take a look.
+From the source code, there is another function that caught my eyes. It's a `flag` function. Let's take a look.
 
 #### flag
 ```c
@@ -77,7 +77,7 @@ AAA%AAsAABAA$AAnAACAA-AA(AADAA;AA)AAEAAaAA0AAFAAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4A
 Program received signal SIGSEGV, Segmentation fault.
 ```
 
-From the output above, we can determine which part of our pattern is hitting the return in main function by examining the `$rsp`.
+From the output above, we can determine which part of our pattern is hitting the return in the main function by examining the `$rsp`.
 ```
 gdb-peda$ x/gx $rsp
 0x7fffffffdf48: 0x4141464141304141
@@ -166,7 +166,7 @@ Now all we need to do is just run the program!
 
 Wait what? Sadly we didn't get the flag :(
 
-After some research, it seems the problem is stack alignment (Reference: [Buffer overflow stack alignment](https://youtu.be/vqNQe9xjz2Q)). From the youtube video, all that we need is just the address of return in main function and add it before add the address of flag into the payload.
+After some research, it seems the problem is stack alignment (Reference: [Buffer overflow stack alignment](https://youtu.be/vqNQe9xjz2Q)). From the youtube video, all that we need is just the address of return in the main function and put it after padding.
 
 ```python
 from pwn import *
