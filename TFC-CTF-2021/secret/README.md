@@ -98,6 +98,7 @@ s.close()
 ```
 
 Now we need to do is just run the program to make sure it works!
+
 ![](secret_local.png)
 
 Since it works, lets test on remote server by adding host, port and replacing `s = process("./secret")` to `s = remote(host, port)`
