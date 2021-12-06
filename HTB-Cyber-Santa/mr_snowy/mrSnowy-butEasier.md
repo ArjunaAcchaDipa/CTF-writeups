@@ -134,7 +134,7 @@ int deactivate_camera()
 }
 ```
 
-![](img/duar.jpg)
+<img src="img/duar.jpg" alt="duar" style="width:200px;"/>
 
 This is the one :'). Let's use gdb to find the offset and get the function address.
 
