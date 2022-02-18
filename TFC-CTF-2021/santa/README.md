@@ -6,7 +6,7 @@ Tell your wish to Santa... it might come true
 
 ## Analysis
 
-In this challenge we were given an ELF-64bit named `zoom2win` with no canary, NX enabled, and no PIE.
+In this challenge we were given an ELF-64bit named `santa` with no canary, NX enabled, and no PIE.
 
 ```
 $ file santa; checksec santa  
